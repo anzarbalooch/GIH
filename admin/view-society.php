@@ -30,6 +30,13 @@ function getRandomImage(imgAr, path) {
     document.write(imgStr); document.close();
 }
 </script>
+		<style>input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}</style>
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -162,7 +169,7 @@ function getRandomImage(imgAr, path) {
         <div class="box">
             <div class="box-header with-border">
               <h3 class="box-title">List of Societies</h3>
-              <h6 class="box-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
+              <h6 class="box-subtitle">Export data to Copy, CSV, Excel, PDF &amp; Print</h6>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
