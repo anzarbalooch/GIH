@@ -125,7 +125,7 @@ function getRandomImage(imgAr, path) {
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="view-drivers.php">View</a></li>
+            <li><a href="view-drivers.php">View</a></li>
             <li><a href="edit-drivers.php">Edit</a></li>
           </ul>
         </li>
@@ -137,7 +137,7 @@ function getRandomImage(imgAr, path) {
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="view-society.php">View</a></li>
+            <li class="active"><a href="view-society.php">View</a></li>
             <li><a href="edit-society.php">Edit</a></li>
           </ul>
         </li>
@@ -151,7 +151,7 @@ function getRandomImage(imgAr, path) {
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Drivers
+        Society
       </h1>
     </section>
 
@@ -161,7 +161,7 @@ function getRandomImage(imgAr, path) {
        <div class="col-12">
         <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">List Of Drivers</h3>
+              <h3 class="box-title">List of Societies</h3>
               <h6 class="box-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
             </div>
             <!-- /.box-header -->
@@ -169,30 +169,24 @@ function getRandomImage(imgAr, path) {
               <table id="member-list" class="table table-hover table-bordered display margin-top-10 table-responsive" cellspacing="0" width="100%">
 				<thead>
 					<tr>
+						<th>ID</th>
 						<th>Name</th>
-						<th>Email</th>
-						<th>Phone</th>
-						<th>House No &amp; Society</th>
-						<th>Landmark</th>
-						<th>District</th>
-						<th>Pincode</th>
-						<th>State</th>
-						<th>Aadhar No</th>
-						<th>DL No</th>
+						<th>Address</th>
+						<th>Phone No</th>
+						<th>GPS Coordinates</th>
+						<th>Average Production</th>
+						<th>Route ID</th>
 					</tr>
 				</thead>
 				<tfoot>
 					<tr>
+						<th>ID</th>
 						<th>Name</th>
-						<th>Email</th>
-						<th>Phone</th>
-						<th>House No &amp; Society</th>
-						<th>Landmark</th>
-						<th>District</th>
-						<th>Pincode</th>
-						<th>State</th>
-						<th>Aadhar No</th>
-						<th>DL No</th>
+						<th>Address</th>
+						<th>Phone No</th>
+						<th>GPS Coordinates</th>
+						<th>Average Production</th>
+						<th>Route ID</th>
 					</tr>
 				</tfoot>
 								<tbody>
@@ -235,5 +229,4 @@ function getRandomImage(imgAr, path) {
 	<script src="../assets/ser/js/pages/data-table.js"></script>
 
 </body>
-
-
+</html>

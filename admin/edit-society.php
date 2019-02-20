@@ -99,8 +99,8 @@ document.close();
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="view-vehicles.php">View</a></li>
-            <li><a href="edit-vehicles.php">Edit</a></li>
+            <li><a href="view-drivers.php">View</a></li>
+            <li class="active"><a href="edit-drivers.php">Edit</a></li>
           </ul>
         </li>
 	<li class="treeview">
@@ -112,7 +112,7 @@ document.close();
           </a>
           <ul class="treeview-menu">
             <li><a href="view-drivers.php">View</a></li>
-            <li class="active"><a href="edit-drivers.php">Edit</a></li>
+            <li><a href="edit-drivers.php">Edit</a></li>
           </ul>
         </li>
 	<li class="treeview">
@@ -124,7 +124,7 @@ document.close();
           </a>
           <ul class="treeview-menu">
             <li><a href="view-society.php">View</a></li>
-            <li><a href="edit-society.php">Edit</a></li>
+            <li class="active"><a href="edit-society.php">Edit</a></li>
           </ul>
         </li>
 	<li>
@@ -136,24 +136,30 @@ document.close();
 <div class="content-wrapper">
 <!-- Content Header (Page header) -->
 <section class="content-header">
-<h1>Drivers</h1>
+<h1>Society</h1>
 </section>
 <!-- Main content -->
 <section class="content">
 <!-- Basic Forms -->
 <div class="box">
 <div class="box-header with-border bg-success">
-	<h3 class="box-title">Add New Driver</h3>
+	<h3 class="box-title">Add New Society</h3>
 </div>
 <!-- /.box-header -->
 <div class="box-body">
 	<div class="row">
 		<div class="col">
 			<form novalidate action="" method="post">
+				<div class="form-group">
+					<h5>Society ID <span class="text-danger">*</span></h5>
+					<div class="controls">
+						<input type="text" name="s_id" class="form-control" required data-validation-required-message="Enter your full name"> </div>
+					<div class="form-control-feedback"><small>This ID should match your account.</small></div>
+				</div>
 			<div class="form-group">
 					<h5>Full Name <span class="text-danger">*</span></h5>
 					<div class="controls">
-						<input type="text" name="name" class="form-control" required data-validation-required-message="Enter your full name"> </div>
+						<input type="text" name="s_name" class="form-control" required data-validation-required-message="Enter your full name"> </div>
 					<div class="form-control-feedback"><small>The name should match your legal identity proofs.</small></div>
 				</div>
 				<div class="row">
@@ -161,7 +167,7 @@ document.close();
 				<div class="form-group">
 					<h5>Email <span class="text-danger">*</span></h5>
 					<div class="controls">
-						<input type="text" name="email" class="form-control" data-validation-regex-regex="([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})" required data-validation-required-message="Please enter your email address" data-validation-regex-message="Enter a valid email address">
+						<input type="text" name="s_email" class="form-control" data-validation-regex-regex="([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})" required data-validation-required-message="Please enter your email address" data-validation-regex-message="Enter a valid email address">
 					</div>
 					<div class="form-control-feedback"><small>We hate spam as much as you do.</small></div>
 				</div>
@@ -170,30 +176,30 @@ document.close();
 				<div class="form-group">
 					<h5>Phone <span class="text-danger">*</span></h5>
 					<div class="controls">
-						<input type="number" name="phone" class="form-control" data-validation-regex-regex="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[6789]\d{9}$" required data-validation-required-message="Enter your mobile number" data-validation-regex-message="Enter a valid Indian phone number"> </div>
+						<input type="number" name="s_phone" class="form-control" data-validation-regex-regex="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[6789]\d{9}$" required data-validation-required-message="Enter your mobile number" data-validation-regex-message="Enter a valid Indian phone number"> </div>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-4">		
 				<div class="form-group">
-					<h5>House No &amp; Society name <span class="text-danger">*</span></h5>
+					<h5>Address<span class="text-danger">*</span></h5>
 					<div class="controls">
-						<input type="text" name="appartment" class="form-control" required data-validation-required-message="Enter your House Number, Floor, Appartment name"> </div>
+						<input type="text" name="s_address" class="form-control" required data-validation-required-message="Enter your House Number, Floor, Appartment name"> </div>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="form-group">
 					<h5>Landmark <span class="text-danger">*</span></h5>
 					<div class="controls">
-						<input type="text" name="landmark" class="form-control" required data-validation-required-message="Enter your Landmark"> </div>
+						<input type="text" name="s_landmark" class="form-control" required data-validation-required-message="Enter your Landmark"> </div>
 				</div>
 			</div>
 			<div class="col-md-4">		
 				<div class="form-group">
 					<h5>District <span class="text-danger">*</span></h5>
 					<div class="controls">
-						<input type="text" name="district" class="form-control" required data-validation-required-message="Enter your District or Town"> </div>
+						<input type="text" name="s_district" class="form-control" required data-validation-required-message="Enter your District or Town"> </div>
 				</div>
 			</div>
 		</div>
@@ -202,7 +208,7 @@ document.close();
 				<div class="form-group">
 					<h5>Pincode <span class="text-danger">*</span></h5>
 					<div class="controls">
-						<input type="number" name="pincode" class="form-control" data-validation-regex-regex="^[1-9][0-9]{5}$" required data-validation-required-message="Enter your Pincode" data-validation-regex-message="Enter a valid Indian Zip code"> </div>
+						<input type="number" name="s_pincode" class="form-control" data-validation-regex-regex="^[1-9][0-9]{5}$" required data-validation-required-message="Enter your Pincode" data-validation-regex-message="Enter a valid Indian Zip code"> </div>
 				</div>
 			</div>
 			<div class="col-md-6">
@@ -255,16 +261,16 @@ document.close();
 		<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
-						<h5>Aadhar Number<span class="text-danger">*</span></h5>
+						<h5>Average Collection (in Litres)<span class="text-danger">*</span></h5>
 						<div class="controls">
-							<input type="number" name="aadhar" class="form-control" required data-validation-required-message="Aadhar Number is mandatory for identification proof" data-validation-regex-regex="^[\d]{12}$" data-validation-regex-message="Enter valid Aadhar number"> </div>
+							<input type="number" name="s_avg" class="form-control" required data-validation-required-message="We want this data to minimize transportation costs"> </div>
 					</div>
 				</div>
 			<div class="col-md-6">
 				<div class="form-group">
-						<h5>Driving License Number<span class="text-danger">*</span></h5>
+						<h5>Route ID<span class="text-danger">*</span></h5>
 						<div class="controls">
-							<input type="text" name="pan" class="form-control" required data-validation-required-message="Enter your Driving License Number" data-validation-regex-regex="[A-Z]{2}[0-9]{13}" data-validation-regex-message="Enter a valid DL number along with your state code eg GJ or MH"> </div>
+							<input type="number" name="pan" class="form-control" required data-validation-required-message="Enter your preferred route ID"> </div>
 				</div>
 			</div>
 		</div>
@@ -285,16 +291,16 @@ document.close();
 <!-- Basic Forms -->
 <div class="box">
 <div class="box-header with-border bg-danger">
-	<h3 class="box-title">Remove Any Driver</h3>
+	<h3 class="box-title">Remove Any Society</h3>
 </div>
 	<div class="box-body">
 	<div class="row">
 		<div class="col">
 			<form novalidate action="" method="post">
 				<div class="form-group">
-					<h5>Driving License Number <span class="text-danger">*</span></h5>
+					<h5>Society ID <span class="text-danger">*</span></h5>
 					<div class="controls">
-							<input type="text" name="pan" class="form-control" required data-validation-required-message="Enter your Driving License Number" data-validation-regex-regex="[A-Z]{2}[0-9]{13}" data-validation-regex-message="Enter a valid DL number along with your state code eg GJ or MH"> </div>
+							<input type="text" name="s_id" class="form-control" required data-validation-required-message="Enter your society ID to remove it." data-validation-regex-regex="[A-Z]{2}[0-9]{13}" data-validation-regex-message="Enter a valid society ID"> </div>
 				</div>
 						<div class="text-xs-right">
 					<button type="submit" class="btn bg-danger">Remove</button>
